@@ -52,8 +52,9 @@ class PlaceholderFragment : Fragment() {
         // Button click listeners
 
         p1Button.setOnClickListener {
-            p1SpaceCount = p1SpaceCount - 1
-
+            if (p1SpaceCount > 0) {
+                p1SpaceCount = p1SpaceCount - 1
+            }
 
             p1TextView.text = p1SpaceCount.toString() + "/" + maxP1SpaceCount.toString()
 
@@ -61,7 +62,9 @@ class PlaceholderFragment : Fragment() {
         }
 
         p2Button.setOnClickListener {
-            p2SpaceCount = p2SpaceCount - 1
+            if (p2SpaceCount > 0) {
+                p2SpaceCount = p2SpaceCount - 1
+            }
 
             p2TextView.text = p2SpaceCount.toString() + "/" + maxP2SpaceCount.toString()
         }
