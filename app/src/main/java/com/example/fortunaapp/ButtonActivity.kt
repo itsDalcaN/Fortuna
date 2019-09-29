@@ -12,11 +12,11 @@ class ButtonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_button)
 
-        var p1SpaceCount: Int = 5
-        val maxP1SpaceCount: Int = 5
+        var p1SpaceCount: Int = 50
+        val maxP1SpaceCount: Int = 50
 
-        var p2SpaceCount: Int = 5
-        val maxP2SpaceCount: Int = 5
+        var p2SpaceCount: Int = 50
+        val maxP2SpaceCount: Int = 50
 
         // Get All View Reference
         val p1TextView: TextView = findViewById(R.id.p1_space_count)
