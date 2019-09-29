@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.fortunaapp.R
+import kotlinx.android.synthetic.main.fragment_main.*
 
 /**
  * A placeholder fragment containing a simple view.
@@ -19,7 +20,7 @@ class PlaceholderFragment : Fragment() {
     private lateinit var pageViewModel: PageViewModel
 
     private var p1SpaceCount: Int = 5
-    private var p2SpaceCount = 5
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +45,7 @@ class PlaceholderFragment : Fragment() {
             p1SpaceCount = p1SpaceCount - 1
 
             textView.text = p1SpaceCount.toString()
+
         }
 
 
