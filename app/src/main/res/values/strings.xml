@@ -11,4 +11,5 @@
     <string name="p2_textview"> TextView </string>
     <string name="p2">P2</string>
     <string name="_5">5</string>
+    <string name="logo">logo</string>
 </resources>
