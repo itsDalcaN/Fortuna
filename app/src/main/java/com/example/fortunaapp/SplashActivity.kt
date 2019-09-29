@@ -14,7 +14,12 @@ class SplashActivity : AppCompatActivity() {
         val background : ConstraintLayout = findViewById(R.id.splashy)
 
         background.setOnClickListener {
-
+            startMainActivity()
         }
+    }
+
+    private fun startMainActivity() {
+        val intent = Intent(this@SplashActivity, MainActivity::class.java)
+        startActivity(intent)
     }
 }
