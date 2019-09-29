@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -17,6 +18,9 @@ class PlaceholderFragment : Fragment() {
 
     private lateinit var pageViewModel: PageViewModel
 
+    private var p1SpaceCount: Int = 5
+    private var p2SpaceCount = 5
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         pageViewModel = ViewModelProviders.of(this).get(PageViewModel::class.java).apply {
@@ -29,10 +33,20 @@ class PlaceholderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_main, container, false)
-        val textView: TextView = root.findViewById(R.id.section_label)
+        val textView: TextView = root.run { findViewById(R.id.p1_space_count) }
         pageViewModel.text.observe(this, Observer<String> {
             textView.text = it
         })
+
+        val p1Button: Button = root.findViewById(R.id.p1Button)
+
+        p1Button.setOnClickListener {
+            p1SpaceCount = p1SpaceCount - 1
+
+            textView.text = p1SpaceCount.toString()
+        }
+
+
         return root
     }
 
