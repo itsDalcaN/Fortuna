@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.fortunaapp.R
-import kotlinx.android.synthetic.main.fragment_main.*
 
 /**
  * A placeholder fragment containing a simple view.
@@ -20,6 +19,10 @@ class PlaceholderFragment : Fragment() {
     private lateinit var pageViewModel: PageViewModel
 
     private var p1SpaceCount: Int = 5
+    private val maxP1SpaceCount: Int = 5
+
+    private var p2SpaceCount: Int = 5
+    private val maxP2SpaceCount: Int = 5
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,19 +36,34 @@ class PlaceholderFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Get All View Reference
         val root = inflater.inflate(R.layout.fragment_main, container, false)
-        val textView: TextView = root.run { findViewById(R.id.p1_space_count) }
-        pageViewModel.text.observe(this, Observer<String> {
-            textView.text = it
-        })
+        val p1TextView: TextView = root.run { findViewById(R.id.p1_space_count) }
+        val p2TextView: TextView = root.findViewById(R.id.p2_space_count)
 
         val p1Button: Button = root.findViewById(R.id.p1Button)
+        val p2Button: Button = root.findViewById(R.id.p2Button)
+
+        // Initial Displays
+        p1TextView.text = p1SpaceCount.toString() + "/" + maxP1SpaceCount.toString()
+        p2TextView.text = p2SpaceCount.toString() + "/" + maxP2SpaceCount.toString()
+
+
+        // Button click listeners
 
         p1Button.setOnClickListener {
             p1SpaceCount = p1SpaceCount - 1
 
-            textView.text = p1SpaceCount.toString()
 
+            p1TextView.text = p1SpaceCount.toString() + "/" + maxP1SpaceCount.toString()
+
+
+        }
+
+        p2Button.setOnClickListener {
+            p2SpaceCount = p2SpaceCount - 1
+
+            p2TextView.text = p2SpaceCount.toString() + "/" + maxP2SpaceCount.toString()
         }
 
 

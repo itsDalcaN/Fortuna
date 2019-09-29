@@ -12,7 +12,8 @@ import com.example.fortunaapp.ui.main.SectionsPagerAdapter
 
 class MainActivity : AppCompatActivity() {
 
-    private var p1SpaceCount: Int = 500
+    private var p1SpaceCount: Int = 5
+    private var p2SpaceCount: Int = 5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
