@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "654423517557",
+    "firebase_url": "https://fortuna-c5f0a.firebaseio.com",
+    "project_id": "fortuna-c5f0a",
+    "storage_bucket": "fortuna-c5f0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654423517557:android:6539614da17af1f45fcb3c",
+        "android_client_info": {
+          "package_name": "com.example.fortunaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654423517557-6upfn2cebl1r2lhe5po97td6u1d3fk1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBefIJBRP36My1w1LvTXy_2yegl_-IV4XA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654423517557-6upfn2cebl1r2lhe5po97td6u1d3fk1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
