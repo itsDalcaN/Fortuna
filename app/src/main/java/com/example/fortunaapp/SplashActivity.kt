@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun startMainActivity() {
-        val intent = Intent(this@SplashActivity, MainActivity::class.java)
+        val intent = Intent(this@SplashActivity, ButtonActivity::class.java)
         startActivity(intent)
     }
 }
